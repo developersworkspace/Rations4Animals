@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+@model object[]
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />S
+    <title>World Of Rations</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+
+            <tr>
+                @foreach (string[] s in (string[][])Model[1])
+                {
+                    <td>@s[0]</td>
+                }
+
+            </tr>
+
+
+
+
+
+            @foreach (System.Data.DataRow dr in (System.Data.DataRowCollection)Model[0])
+            {
+                <tr>
+                    @foreach (string[] s in (string[][])Model[1])
+                    {
+                    <td>@dr[s[0]]</td>
+                    }
+                    
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>

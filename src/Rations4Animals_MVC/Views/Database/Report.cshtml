@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "Report";
+}
+@model Rations4Animals_MVC.Models.Statistics
+    <h2>Report</h2>
+
+    <table width="616" border=0 bordercolor="#000000" cellpadding="7" cellspacing="0">
+        <colgroup>
+            <col width="190">
+            <col width="191">
+            <col width="190">
+        </colgroup>
+        <tbody>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western"><b>Total formulations</b></p>
+                </td>
+                <td width="191">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="190">
+                    <p class="western"><b>@Model.numberOfFormulations</b></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="191">
+                    <p class="western"><i>Successful</i></p>
+                </td>
+                <td width="190">
+                    <p class="western"><i>@Model.numberOfSuccessfulFormulations (@Model.successfulPersentage %)</i></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="191">
+                    <p class="western"><i>Unsuccessful</i></p>
+                </td>
+                <td width="190">
+                    <p class="western"><i>@Model.numberOfUnsuccessfulFormulations (@Model.unsuccessfulPersentage %)</i></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="191">
+                    <p class="western"><b>Paid</b></p>
+                </td>
+                <td width="190">
+                    <p class="western"><b>@Model.numberOfPaidFormulations (@Model.paidPersentage%)</b></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western"><b>Total users</b></p>
+                </td>
+                <td width="191">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="190">
+                    <p class="western"><b>@Model.numberOfUsers</b></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="191">
+                    <p class="western"><i>Paid</i></p>
+                </td>
+                <td width="190">
+                    <p class="western"><i>@Model.numberOfUsersPaid (@Model.usersPaidPersentage %)</i></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western"><b>Top country</b></p>
+                </td>
+                <td width="191">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="190">
+                    <p class="western"><i><b>South-Africa (13)</b></i></p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="190">
+                    <p class="western"><b>Total profit</b></p>
+                </td>
+                <td width="191">
+                    <p class="western">
+                        <br>
+                    </p>
+                </td>
+                <td width="190">
+                    <p class="western"><b>$ @((double)Model.numberOfPaidFormulations * 12.99)</b></p>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
